@@ -1,0 +1,14 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% trans "Enterprise account page: change payment details" %}</title>
+  </head>
+  <body>
+    <form action="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-primary" type="submit" value="{% if object %}{% trans "Update wallet" %}{% else %}{% trans "Create wallet" %}{% endif %}" />
+    </form>
+  </body>
+</html>
